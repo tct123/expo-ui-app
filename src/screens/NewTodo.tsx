@@ -1,4 +1,5 @@
 import {
+  ColorPicker,
   DatePicker,
   Form,
   Host,
@@ -73,6 +74,8 @@ export default function NewTodo() {
               ))}
             </Picker>
           </Section>
+
+          <ColorPicker label="Tint Color" selection={"#007AFF"} />
         </Form>
       </Host>
     </>
