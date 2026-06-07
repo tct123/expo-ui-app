@@ -1,5 +1,5 @@
 import { Stack, useRouter } from "expo-router";
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 
 export default function Index() {
   const router = useRouter();
@@ -7,7 +7,10 @@ export default function Index() {
     <>
       <Stack.Toolbar placement="right">
         <Stack.Toolbar.Button
-          icon={"plus"}
+          icon={Platform.select({
+            android: require("../../assets/images/expo-logo.png"),
+            ios: "plus",
+          })}
           onPress={() => router.push("/new")}
         />
       </Stack.Toolbar>
