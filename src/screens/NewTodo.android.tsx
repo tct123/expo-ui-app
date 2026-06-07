@@ -1,3 +1,4 @@
+import { useColors } from "@/theme/ThemeContext";
 import ChevronRight from "@expo/material-symbols/chevron_right.xml";
 import {
   Column,
@@ -19,9 +20,10 @@ function SettingsSection({
   title: string;
   children: ReactNode;
 }) {
+  const { background, text, secondaryText } = useColors();
   return (
     <>
-      <Text style={{ typography: "labelLarge" }} modifiers={[]}>
+      <Text color={text} style={{ typography: "labelLarge" }} modifiers={[]}>
         {title}
       </Text>
       <Column verticalArrangement={{ spacedBy: 2 }}>{children}</Column>
@@ -44,9 +46,12 @@ function SettingsActionRow({
   icon?: number;
   typography?: "titleMedium" | "labelSmall";
 }) {
+  const { secondaryBackground } = useColors();
   return (
     <ListItem
-      colors={{}}
+      colors={{
+        containerColor: secondaryBackground,
+      }}
       modifiers={[
         clip(Shapes.RoundedCorner(cornerRadii(16, position))),
         clickable(onPress),
@@ -69,6 +74,7 @@ function SettingsActionRow({
 }
 
 export default function NewTodo() {
+  const { secondaryBackground } = useColors();
   return (
     <Host style={{ flex: 1 }}>
       <LazyColumn
@@ -108,6 +114,9 @@ export default function NewTodo() {
         <SettingsSection title="Devs">
           <ListItem
             modifiers={[clip(Shapes.RoundedCorner(cornerRadii(16, "leading")))]}
+            colors={{
+              containerColor: secondaryBackground,
+            }}
           >
             <ListItem.HeadlineContent>
               <Text style={{ typography: "titleMedium" }}>toggle</Text>
@@ -129,6 +138,9 @@ export default function NewTodo() {
             modifiers={[
               clip(Shapes.RoundedCorner(cornerRadii(16, "trailing"))),
             ]}
+            colors={{
+              containerColor: secondaryBackground,
+            }}
           >
             <ListItem.HeadlineContent>
               <Text style={{ typography: "titleMedium" }}>toggle 2</Text>
