@@ -1,4 +1,5 @@
 import {
+  Button,
   ColorPicker,
   DatePicker,
   Form,
@@ -8,6 +9,7 @@ import {
   Text,
   TextField,
   Toggle,
+  useNativeState,
 } from "@expo/ui/swift-ui";
 import {
   frame,
@@ -23,6 +25,12 @@ const tags = ["None", "Work", "Home", "Leisure", "Other"];
 
 export default function NewTodo() {
   const [selectedTag, setSelectedTag] = useState("None");
+  const text = useNativeState("");
+  const selection = useNativeState({ start: 0, end: 0 });
+
+  function onSubmit() {
+    console.log("text: ", text.value);
+  }
   return (
     <>
       <Stack.Toolbar placement="right">
@@ -40,12 +48,20 @@ export default function NewTodo() {
             <TextField
               placeholder="Title"
               autoFocus
+              text={text}
+              selection={selection}
+              onSelectionChange={(selection) => {
+                console.log(selection);
+              }}
               modifiers={[listRowSeparator("hidden")]}
             />
             <TextField
               placeholder="Description"
               modifiers={[frame({ height: 80, alignment: "top" })]}
             />
+            <Button onPress={onSubmit}>
+              <Text>submit</Text>
+            </Button>
           </Section>
 
           <DatePicker
