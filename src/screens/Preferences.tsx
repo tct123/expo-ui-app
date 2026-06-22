@@ -91,7 +91,7 @@ export default function Preferences() {
           </LabeledRow>
           <FieldGroup.SectionFooter>
             <Text textStyle={{ fontSize: 13, color: GRAY }}>
-              We'll only ping you when your order changes status.
+              We&apos;ll only ping you when your order changes status.
             </Text>
           </FieldGroup.SectionFooter>
         </FieldGroup.Section>
