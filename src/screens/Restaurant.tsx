@@ -31,8 +31,7 @@ import {
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import { Text as RNText, View } from "react-native";
-
-import { usePreferences } from "@/state/preferences";
+import { usePreferences } from "../state/preferences";
 
 const BRAND = "#E8590C";
 const GRAY = "#8E8E93";
@@ -196,10 +195,10 @@ export default function Restaurant() {
       current.some((item) => item.id === 11)
         ? current
         : [
-            // prettier-ignore
-            { id: 11, name: "Birria (Today's Special)", description: "Slow-braised beef, consommé for dipping", price: 4.95, emoji: "🍲", category: "Tacos" as const, spicy: true },
-            ...current,
-          ],
+          // prettier-ignore
+          { id: 11, name: "Birria (Today's Special)", description: "Slow-braised beef, consommé for dipping", price: 4.95, emoji: "🍲", category: "Tacos" as const, spicy: true },
+          ...current,
+        ],
     );
   }
 
@@ -270,7 +269,7 @@ export default function Restaurant() {
               onPress={() =>
                 alert(
                   `Order: ${cart.count} item(s) — $${cart.total.toFixed(2)}\n` +
-                    `${orderType} · ${tip}% tip`,
+                  `${orderType} · ${tip}% tip`,
                 )
               }
               style={{

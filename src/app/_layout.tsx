@@ -2,10 +2,9 @@ import { Stack } from "expo-router";
 import { ThemeProvider } from "expo-router/react-navigation";
 import { StatusBar } from "expo-status-bar";
 import { useColorScheme } from "react-native";
-
-import { PreferencesProvider } from "@/state/preferences";
-import { getBrandColors, getNavigationTheme } from "@/theme/colors";
-import { ColorsProvider } from "@/theme/ThemeContext";
+import { PreferencesProvider } from "../state/preferences";
+import { getBrandColors, getNavigationTheme } from "../theme/colors";
+import { ColorsProvider } from "../theme/ThemeContext";
 
 export default function RootLayout() {
   return (

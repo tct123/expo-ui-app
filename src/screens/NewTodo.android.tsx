@@ -1,5 +1,3 @@
-import { useColors } from "@/theme/ThemeContext";
-import { formatPhone } from "@/utils/formatPhone";
 import ChevronRight from "@expo/material-symbols/chevron_right.xml";
 import {
   Column,
@@ -23,6 +21,8 @@ import {
 } from "@expo/ui/jetpack-compose/modifiers";
 import { ReactNode, useCallback, useState } from "react";
 import { TextInput } from "react-native";
+import { useColors } from "../theme/ThemeContext";
+import { formatPhone } from "../utils/formatPhone";
 
 function SettingsSection({
   title,
@@ -77,7 +77,7 @@ function SettingsActionRow({
         <Icon
           source={icon}
           size={20}
-          // tint={systemColors.secondaryText}
+        // tint={systemColors.secondaryText}
         />
       </ListItem.TrailingContent>
     </ListItem>
@@ -161,12 +161,12 @@ export default function NewTodo() {
 
           <SettingsActionRow
             label="world"
-            onPress={() => {}}
+            onPress={() => { }}
             position="leading"
           />
           <SettingsActionRow
             label="world"
-            onPress={() => {}}
+            onPress={() => { }}
             position="trailing"
           />
         </SettingsSection>
@@ -174,12 +174,12 @@ export default function NewTodo() {
         <SettingsSection title="part 2">
           <SettingsActionRow
             label="hello"
-            onPress={() => {}}
+            onPress={() => { }}
             position="leading"
           />
           <SettingsActionRow
             label="jetpack"
-            onPress={() => {}}
+            onPress={() => { }}
             position="trailing"
           />
         </SettingsSection>
@@ -220,7 +220,7 @@ export default function NewTodo() {
             </ListItem.HeadlineContent>
 
             <ListItem.TrailingContent>
-              <RadioButton selected={true} onClick={() => {}} />
+              <RadioButton selected={true} onClick={() => { }} />
             </ListItem.TrailingContent>
           </ListItem>
         </SettingsSection>

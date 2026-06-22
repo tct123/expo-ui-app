@@ -7,7 +7,6 @@
 
 import { createContext, type ReactNode, use } from "react";
 import { useColorScheme } from "react-native";
-
 import {
   getBrandColors,
   type ResolvedBrand,

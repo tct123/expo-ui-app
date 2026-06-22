@@ -10,8 +10,7 @@ import {
   Switch,
   Text,
 } from "@expo/ui";
-
-import { usePreferences } from "@/state/preferences";
+import { usePreferences } from "../state/preferences";
 
 const GRAY = "#8E8E93";
 

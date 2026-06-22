@@ -1,1 +1,1 @@
-export { default } from "@/screens/Restaurant";
+export { default } from "../screens/Restaurant";
