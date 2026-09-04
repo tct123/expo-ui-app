@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "dependencies": {
     "@expo/material-symbols": "^0.1.1",
-    "@expo/ui": "~57.0.15",
-    "expo": "^57.0.19",
+    "@expo/ui": "~57.0.16",
+    "expo": "^57.0.20",
     "expo-constants": "~57.0.17",
     "expo-dev-client": "~57.0.18",
     "expo-device": "~57.0.1",
@@ -13,7 +13,7 @@
     "expo-glass-effect": "~57.0.1",
     "expo-image": "~57.0.4",
     "expo-linking": "~57.0.9",
-    "expo-router": "~57.0.18",
+    "expo-router": "~57.0.19",
     "expo-splash-screen": "~57.0.8",
     "expo-status-bar": "~57.0.1",
     "expo-symbols": "~57.0.2",
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
-    "eslint": "^9.0.0",
+    "eslint": "^9.39.5",
     "eslint-config-expo": "~57.0.2",
     "typescript": "~6.0.3"
   },
