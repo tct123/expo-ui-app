@@ -6,14 +6,12 @@
 // `Color.ios.*` or `Color.android.dynamic.*` directly.
 
 import { Color } from "expo-router";
-// Expo SDK 56+. On older SDKs, import these from "@react-navigation/native".
 import {
   DarkTheme,
   DefaultTheme,
   type Theme,
 } from "expo-router/react-navigation";
 import { type ColorValue, Platform, useColorScheme } from "react-native";
-
 import { type BrandColor, themeConfig } from "./config";
 
 type SystemColorKey = keyof typeof themeConfig.system;
