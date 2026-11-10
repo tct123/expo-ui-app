@@ -195,7 +195,6 @@ export default function Restaurant() {
       current.some((item) => item.id === 11)
         ? current
         : [
-          // prettier-ignore
           { id: 11, name: "Birria (Today's Special)", description: "Slow-braised beef, consommé for dipping", price: 4.95, emoji: "🍲", category: "Tacos" as const, spicy: true },
           ...current,
         ],
