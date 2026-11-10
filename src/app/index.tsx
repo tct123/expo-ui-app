@@ -11,6 +11,7 @@ export default function Index() {
           icon={Platform.select({
             android: require("../../assets/images/expo-logo.png"),
             ios: "plus",
+            web: require("../../assets/images/expo-logo.png"),
           })}
           onPress={() => router.push("/new")}
         />
